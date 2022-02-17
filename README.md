@@ -1,12 +1,12 @@
 # Rotinas
 
-Diversas rotinas para trabalho interno da Lisboa E-Nova. Versão deste documento formatada e online em https://developerlen.github.io/rotinas/
+Diversas rotinas para trabalho interno da Lisboa E-Nova. <a href="https://developerlen.github.io/rotinas/" >Clique aqui</a> Para aceder à versão online e formatada deste documento.
 
 # Setup
 
 ## Python
 
-Se não tiver o python instalado no computador, ir a https://www.python.org/downloads/ e instalar a versão mais recente.
+Se não tiver o python instalado no computador, pode ir <a href="https://www.python.org/downloads/">aqui</a> e instalar a versão mais recente.
 
 ## Bibliotecas
 
@@ -15,18 +15,18 @@ Para garantir que não há incompatibildades de versões de bibliotecas, o melho
 
 _WINDOWS_
 
-```bash
-    python -m venv venv
-    .\venv\scripts\activate
-    pip install -r requirements.txt
+```dos
+C:\Windows\...\rotinas> python -m venv venv
+C:\Windows\...\rotinas> .\venv\scripts\activate
+C:\Windows\...\rotinas> pip install -r requirements.txt
 ```
 
 _MAC/LINUX_
 
 ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+~$ python3 -m venv venv
+~$ source venv/bin/activate
+~$ pip install -r requirements.txt
 ```
 
 # Run
@@ -35,14 +35,14 @@ Sempre que quiser correr qualquer um dos programas aqui existentes, deve-se acti
 
 _WINDOWS_
 
-```bash
-    .\venv\scripts\activate
+```dos
+C:\Windows\...\rotinas> .\venv\scripts\activate
 ```
 
 _MAC/LINUX_
 
 ```bash
-    source venv/bin/activate
+~$ source venv/bin/activate
 ```
 
 # Programas
@@ -55,12 +55,12 @@ Para correr basta ir à linha de comandos e chamar o ficheiro `run.py` com os ar
 
 <br/>
 
-> :warning: **Não esquecer**: activar o ambiente virtual primeiro!
+> ⚠️ **Não esquecer**: activar o ambiente virtual primeiro!
 
 <br/>
 
 ```
-  python run.py periodo_horario <abastecimento> <ciclo> <date_begin> <date_end>
+C:\Windows\...\rotinas> python run.py periodo_horario <abastecimento> <ciclo> <date_begin> <date_end>
 ```
 
 - <b>abastecimento</b>: MT, BTE ou BTN
@@ -71,7 +71,7 @@ Para correr basta ir à linha de comandos e chamar o ficheiro `run.py` com os ar
 _Exemplo_
 
 ```
-  python run.py periodo_horario BTE semanal 2019-09 2020-08
+C:\Windows\...\rotinas> python run.py periodo_horario BTE semanal 2019-09 2020-08
 ```
 
 ## Telecontagem
@@ -88,20 +88,20 @@ Para correr basta ir à linha de comandos e chamar o ficheiro `run.py` com os ar
 
 <br/>
 
-> :warning: **Não esquecer**: activar o ambiente virtual primeiro!
+> ⚠️ **Não esquecer**: activar o ambiente virtual primeiro!
 
 <br/>
 
 _Para um só cpe_
 
 ```
-  python run.py telecontagem <cpe> <date_begin> <date_end>
+C:\Windows\...\rotinas> python run.py telecontagem <cpe> <date_begin> <date_end>
 ```
 
 _Para vários cpes_
 
 ```
-  python run.py telecontagem <cpe1> <cpe2> <cpe3> <date_begin> <date_end>
+C:\Windows\...\rotinas> python run.py telecontagem <cpe1> <cpe2> <cpe3> <date_begin> <date_end>
 ```
 
 - <b>cpe(s)</b>: um ou vários cpes (separados por um espaço)
@@ -113,13 +113,13 @@ _Para vários cpes_
 - **Um só CPE**
 
 ```
-  python run.py telecontagem PT0002000038740856ZG 2019-09-01 2020-08-31
+C:\Windows\...\rotinas> python run.py telecontagem PT0002000038740856ZG 2019-09-01 2020-08-31
 ```
 
 - **Vários CPEs**
 
 ```
-  python run.py telecontagem PT0002000039321285LM PT0002000038740856ZG 2019-09-01 2020-08-31
+C:\Windows\...\rotinas> python run.py telecontagem PT0002000039321285LM PT0002000038740856ZG 2019-09-01 2020-08-31
 ```
 
 - **Muitos CPEs**
@@ -127,5 +127,5 @@ _Para vários cpes_
 podem ainda editar o ficheiro `telecontagem/cpes.txt` e colocar vários cpes, um em cada linha. Nesse caso, não se devem passar CPEs ao chamar o comando:
 
 ```
-  python run.py telecontagem 2019-09-01 2020-08-31
+C:\Windows\...\rotinas> python run.py telecontagem 2019-09-01 2020-08-31
 ```
