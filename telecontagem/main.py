@@ -1,5 +1,3 @@
-import datetime
-import imp
 import requests
 from telecontagem.secret import USER, PASSWORD
 import json
@@ -37,10 +35,12 @@ session.hooks["response"].append(refresh_token)
 
 def get_telecontagem(cpe: str, date_start: str, date_end: str):
     print(f"\ngetting telecontagem for {cpe} between {date_start} and {date_end}")
-    url = f"https://api.privado.observatorios-lisboa.pt/energy/data/{cpe}/?var=telemetering&start={date_start}&end={date_end}"
+    url = (
+        f"{BASE_URL}/energy/telemetering/?cpes={cpe}&start={date_start}&end={date_end}"
+    )
 
     with session.get(url) as res:
-        if res.status_code > 400:
+        if res.status_code >= 400:
             raise ValueError(json.loads(res.content))
         df = pd.DataFrame(json.loads(res.content))
 
